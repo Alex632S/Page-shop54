@@ -1,0 +1,36 @@
+.menu-category {
+    padding-top: 16px;
+}
+.menu-category-ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    gap: 1px;
+}
+.menu-category__item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-grey;
+    transition: all .3s;
+}
+
+.menu-category__item:hover {
+    transform: scale(1.2);
+}
+
+.menu-category__item-focus {
+    color: $color-accent;
+}
+
+.menu-category__description {
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.018em;
+}
+.menu-category__img {
+    width: 20px;
+    margin-bottom: 6px;
+}
