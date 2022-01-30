@@ -1,0 +1,79 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.column-left__icon {
+    width: 208px;
+}
+
+.menu-nav, 
+.menu-login {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.menu-login {
+    gap: 27px;
+}
+
+.menu-nav-search {
+    &-wrap {
+        display: inline-flex;
+        border-radius: 99px;
+        min-height: 20px;
+        background-color: $color-grey-light;
+    }
+    &__input {
+        vertical-align: middle;
+        padding: 8px 14px;
+        height: 48px;
+        width: 567px;
+        border: none;
+        outline: none;
+        background-color: $color-grey-light;
+        
+        /* Font-search */
+        font-family: $font-inter;
+        font-size: 20px;
+        line-height: 158%;
+        letter-spacing: 0.0075em;
+    }
+    &__btn-loupe, 
+    &__btn-delite {
+        position: relative;
+        width: 34px;
+        padding: 8px;
+        object-fit: cover;
+    }
+
+    /* Paddings for the icons */
+    &__btn-loupe {
+        left: 10px;
+    }
+    &__btn-delite{
+        left: -10px;
+    }
+}
+
+/* Font style for links */
+.menu-nav__link, 
+.menu-login__link {
+    color: $color-accent;
+    letter-spacing: 0.0075em;
+    font-size: 20px;
+    line-height: 158%;
+}
+
+.menu-login__link {
+    padding: 8px 13px;
+    border: 1px solid #9DC2FF;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+/* Shadow Blue */
+.menu-login__link:hover {
+    box-shadow: 0px 2px 4px rgba(27, 78, 163, 0.2), 
+            0px 4px 8px rgba(41, 121, 255, 0.2);
+}

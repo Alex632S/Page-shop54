@@ -1,0 +1,13 @@
+/* Normalize */
+@import "modules/normalize";
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* Variables */
+@import "modules/variables";
+
+/* Main modules */
+@import "modules/global", 
+        "modules/header", 
+        "modules/footer";
