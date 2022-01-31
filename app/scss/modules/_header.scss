@@ -3,23 +3,16 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    position: relative;
-}
-
-/* Button menu */
-.burger-btn {
-    background-color: #4ff;
-    width: 30px;
-    height: 30px;
-    padding: 3px;
-    position: absolute;
-    top: calc(45.5px - 36px * 0.5);
-    right: 21px;
-    display: none;
 }
 
 .column-left__icon {
-    width: 208px;
+    max-width: 171px;
+    height: 88px;
+}
+.column-left__icon-min {
+    width: 40px;
+    height: 40px;
+    display: none;
 }
 
 .menu-nav, 
@@ -47,13 +40,18 @@
         border: none;
         outline: none;
         background-color: $color-grey-light;
-        
         /* Font-search */
         font-family: $font-inter;
-        font-size: 20px;
+        @include responsive-font(20, 14);
         line-height: 158%;
         letter-spacing: 0.0075em;
     }
+
+    &__input::placeholder {
+        color: $color-text;
+        @include responsive-font(20, 14);
+    }
+
     &__btn-loupe, 
     &__btn-delite {
         position: relative;
@@ -71,17 +69,19 @@
     }
 }
 
-@media screen and (max-width: 1400px) {
-    .menu-nav-search__input {
-        width: 451px;
-    }
+/* Button menu */
+.menu-nav-li-display {
+    position: relative;
 }
-
-
-@media screen and (max-width: 1290px) {
-    .menu-nav-search__input {
-        width: 370px;
-    }
+.burger-btn {
+    position: absolute;
+    background-color: #4ff;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    top: -12%;
+    right: 0;
+    display: none;
 }
 
 /* Font style for links */
@@ -89,7 +89,7 @@
 .menu-login__link {
     color: $color-accent;
     letter-spacing: 0.0075em;
-    font-size: 20px;
+    @include responsive-font(20, 14);
     line-height: 158%;
 }
 
@@ -100,29 +100,6 @@
     transition: all .3s;
 }
 
-@media screen and (max-width: 1366px) {
-    .column-left__icon {
-        width: calc(208px - $calc-20);
-    }
-    .menu-nav__link, 
-    .menu-login__link {
-        letter-spacing: 0.0075em; 
-        font-size: calc(20px - $calc-20);
-        line-height: calc(158% - $calc-20);;
-    }
-    .menu-nav-search {
-        &-wrap {
-            display: inline-flex;
-            border-radius: 99px;
-            min-height: 20px;
-            background-color: $color-grey-light;
-        }
-        &__input {
-            height: calc(48px - $calc-20);
-        }
-    }
-}
-
 /* Shadow Blue */
 .menu-login__link:hover {
     box-shadow: 0px 2px 4px rgba(27, 78, 163, 0.2), 
@@ -130,16 +107,96 @@
 }
 
 
+/* Reduce the size of the search space*/
+@media screen and (max-width: 1400px) {
+    .menu-nav-search__input {
+        width: 451px;
+    }
+}
+
+/* Reduce the size */
+@media screen and (max-width: 1366px) {
+    .menu-nav__link, 
+    .menu-login__link {
+        line-height: calc(158% - $calc-20);;
+    }
+    .menu-nav-search {
+        &__input {
+            height: calc(48px - $calc-20);
+        }
+    }
+}
+
+/* Reduce the size of the search space*/
+@media screen and (max-width: 1290px) {
+    .menu-nav-search__input {
+        width: 370px;
+    }
+    .menu-nav-search {
+        &-wrap {
+            height: 30px;
+        }
+        &__input {
+            height: 30px;
+           
+        }
+        &__btn-loupe, 
+        &__btn-delite {
+            width: 32px;
+            padding: 4px;
+        }
+    }
+}
+
+/* Logo minimization */
 @media screen and (max-width: 1150px) {
     .header {
-        justify-content: start;
+        padding-left: 10px;
+        padding-right: 10px;
     }
-    .menu-login,
-    .menu-nav__link,
-    .menu-nav {
+    .column-left__icon {
+        max-width: 171px;
+        display: none;
+    }
+    .column-left__icon-min {
+        width: 40px;
+        display: inline-block;
+    }
+}
+/* Show burger */
+@media screen and (max-width: 980px) {
+    .menu-nav__link {
+        max-width: 100%;
+        visibility: hidden;
+    }
+    .menu-login {
         display: none;
     }
     .burger-btn {
-        display: inline-block;
+        display: block;
+    }
+}
+
+/* Reduce the size of the search space*/
+@media screen and (max-width: 980px) {
+    .menu-nav-search {
+        &-wrap {
+            height: 28px;
+        }
+        &__input {
+            height: 28px;
+           
+        }
+        &__btn-loupe, 
+        &__btn-delite {
+            width: 30px;
+            padding: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .menu-nav-search {
+        display: none;
     }
 }

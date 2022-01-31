@@ -26,7 +26,7 @@
 }
 
 .menu-category__description {
-    font-size: 14px;
+    @include responsive-font(14, 9);
     line-height: 143%;
     letter-spacing: 0.018em;
 }
