@@ -48,7 +48,7 @@
     }
 
     &__input::placeholder {
-        color: $color-text;
+        color: $color-grey;
         @include responsive-font(20, 14);
     }
 
