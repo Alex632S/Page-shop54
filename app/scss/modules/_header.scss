@@ -164,7 +164,7 @@
     }
 }
 /* Show burger */
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 990px) {
     .menu-nav__link {
         max-width: 100%;
         visibility: hidden;
@@ -178,7 +178,7 @@
 }
 
 /* Reduce the size of the search space*/
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 990px) {
     .menu-nav-search {
         &-wrap {
             height: 28px;

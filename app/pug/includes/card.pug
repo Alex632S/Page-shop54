@@ -1,0 +1,24 @@
+.card 
+    .preview
+        img.preview__image(src=IMG_PATH.keyboard, alt=DES[0])
+    .dn-content
+        p.dn-content__description.description-bold Vintage Typewriter to post awesome stories about UI design and webdev.
+    .price
+        h4.price__cost.cost-bold #{"$" + listNum[Math.floor(Math.random() * 11)]}
+    .objective
+        p.objective__description.description-medium Eligible for Shipping To Mars or somewhere else
+    .status
+        .s-obj
+            .stars
+                - var total_stars = Math.floor(Math.random() * 4);
+                - for (var x = 0; x < total_stars; x++)
+                    .stars-wrap
+                        img.stars__image(src=STAR_PARH.star alt="star")
+                .stars-wrap
+                    img.stars__image(src=STAR_PARH.halfway alt="star")
+            span.s-obj__rating #{total_stars + 1.25}
+        .button-card
+            button.button-card__btn 
+                i.icon-btn
+                    img.icon-btn__img(src="../images/card/SVG/like-n.svg", alt="i")
+                span.description-btn Watch

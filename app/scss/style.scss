@@ -12,6 +12,9 @@
 
 /* Main modules */
 @import "modules/global", 
-        "modules/header", 
-        "modules/nav", 
-        "modules/footer";
+"modules/header", 
+"modules/nav", 
+"modules/footer";
+
+/* Includes */
+@import "includes/card";
