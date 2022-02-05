@@ -10,6 +10,8 @@ html(lang="en")
       include includes/variables.pug
       include modules/header.pug
       include modules/nav.pug
-      include includes/card.pug
+      .container.c-flex
+         include modules/nav-bar.pug
+         include modules/content.pug
       include modules/footer.pug
       script(src="js/main.min.js")

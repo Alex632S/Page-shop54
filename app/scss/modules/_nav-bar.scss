@@ -1,0 +1,11 @@
+.nav-bar {
+    width: 18vw;
+    height: 1920px;
+    background-color: #2f2;
+}
+
+@media screen and (max-width: 990px) {
+    .nav-bar {
+        display: none;   
+    }
+}

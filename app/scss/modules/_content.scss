@@ -1,0 +1,140 @@
+.construction-bar {
+    margin-top: 56px;
+}
+
+.accordion-bar,
+.accordion-bar-item {
+    margin: 0;
+}
+.tab input, 
+.tab-content { 
+    display: none; 
+}
+.tab {
+    margin: 0 !important;
+    font-weight: 500;
+    @include responsive-font(14, 10);
+    line-height: 143%;
+    letter-spacing: 0.018em;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #787885;
+    border: 1px solid #787885;
+}
+.tab:hover {
+    border: 1px solid #5A5B6A;
+    color: #19191D;
+    .tab-title::before {
+        content: url(../images/construction-bar/JPG/ter.jpg);
+        position: absolute;
+        width: 52px;
+        height: 16px;
+        top: -11px;
+        left: 6%;
+    }
+}
+.tab-title {
+    position: relative;
+    padding: 10px;
+    padding-right: 36px;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.tab-title::after {
+    content: url(../images/construction-bar/SVG/arrow-down.svg);
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 12px);
+    right: 6%;
+}
+.tab-content {
+    padding: 10px 20px;
+}
+
+.tab :checked + .tab-title::after {
+    content: url(../images/construction-bar/SVG/arrow-up.svg);
+}
+.tab :checked ~ .tab-content {
+    display: block;
+}
+
+.accordion-bar {
+    width: 440px;
+}
+
+.accordion-bar,
+.filter-view-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0;
+}
+
+.filter-view-wrap {
+    width: 3114px;
+    justify-content: flex-end;
+}
+
+.content-header {
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-view-category {
+    display: flex;
+    justify-content: center;
+
+}
+.filter-view-category__btn,
+.filter-view-grid__btn {
+    padding: 8px 13px;
+    font-weight: 500;
+    @include responsive-font(14, 10);
+    line-height: 143%;
+    text-align: center;
+    letter-spacing: 0.018em;
+    color: #5A5B6A;
+    border: none;
+    cursor: pointer;
+}
+/* Shadow Blue */
+.filter-view-category__btn:focus, 
+.filter-view-grid__btn:focus {
+    border-radius: 4px;
+    letter-spacing: 0.018em;
+    color: #2264D1;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(27, 78, 163, 0.2), 
+            0px 4px 8px rgba(41, 121, 255, 0.2);
+}
+
+@media screen and (max-width: 1485px) {
+    .content-header {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .content-header {
+        width: 50vw;
+    }
+    .content-header {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .filter-view-wrap {
+        padding-top: 15px;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .content-header {
+        width: 98vw;
+    }
+}

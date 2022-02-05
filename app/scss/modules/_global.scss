@@ -30,6 +30,18 @@ input[type='search']::-webkit-search-results-decoration {
   padding: 0 11vw;
 }
 
+.c-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1485px) {
+  .container {
+    padding: 0 6vw;
+  }
+}
+
 @media screen and (max-width: 980px) {
   .container {
     padding: 0 1vw;
