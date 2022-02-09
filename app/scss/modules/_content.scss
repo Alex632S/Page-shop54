@@ -1,4 +1,5 @@
 .construction-bar {
+    padding: 3px;
     margin-top: 56px;
 }
 
@@ -59,7 +60,8 @@
     content: url(../images/construction-bar/SVG/arrow-up.svg);
 }
 .tab :checked ~ .tab-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .accordion-bar {
@@ -70,7 +72,7 @@
 .filter-view-wrap {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
+    flex-direction: column;
     padding: 0;
 }
 
@@ -112,6 +114,46 @@
     box-shadow: 0px 2px 4px rgba(27, 78, 163, 0.2), 
             0px 4px 8px rgba(41, 121, 255, 0.2);
 }
+
+
+/* nav-tags */
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 3px;
+    margin: 0;
+    margin-top: 28px;
+    .tags-item {
+        margin-top: 12px;
+    }
+    .tags__link {
+        padding: 8px 12px;
+        @include responsive-font(14, 10);
+        line-height: 143%;
+        letter-spacing: 0.018em;
+        color: #4A4B57;
+        background-color: #EDEDF0;
+        border-radius: 99px;
+        transition: all .3s;
+    }
+    .tags__link:hover {
+        background-color: #fff;
+        color: #19191D;
+    }
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .card-margin {
+        margin: 16px;
+    }
+}
+
 
 @media screen and (max-width: 1485px) {
     .content-header {
