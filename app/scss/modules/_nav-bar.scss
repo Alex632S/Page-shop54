@@ -1,12 +1,82 @@
 .nav-bar {
-    width: calc(355 / 1920 * 100vw);
-    height: 1920px;
-    background-color: #2f2;
+    width: calc(370 / 1920 * 100vw);
 }
 
+.tab input, 
+.tab-content { 
+    display: none; 
+}
+.tab {
+    font-weight: 500;
+    @include responsive-font(14, 10);
+    line-height: 143%;
+    letter-spacing: 0.018em;
+    margin-bottom: 10px;
+    color: #787885;
+    border: none;
+}
+
+.tab-title {
+    position: relative;
+    padding: 10px;
+    padding-left: 16px;
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.tab-title::before {
+    content: url(../images/nav-bar/SVG/chevron-down.svg);
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 12px);
+    left: -10px;
+}
+.tab-content {
+    padding: 10px 20px;
+}
+
+.tab :checked + .tab-title::before {
+    content: url(../images/nav-bar/SVG/chevron-right.svg);
+}
+.tab :checked ~ .tab-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.accordion-bar {
+    width: 440px;
+    * {
+        color: #19191D; 
+    }
+}
+
+.accordion-bar {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0;
+}
+
+.tab-content-item {
+    margin-top: 13px;
+}
+.tab-content-item:first-child {
+    margin-top: 0;
+}
+
+.filter-view-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
 
 @media screen and (max-width: 990px) {
     .nav-bar {
         display: none;   
     }
 }
+
+
