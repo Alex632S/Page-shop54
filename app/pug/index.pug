@@ -12,6 +12,7 @@ html(lang="en")
       include modules/nav.pug
       .container.c-flex
          include modules/nav-bar.pug
-         include modules/content.pug
-      include modules/footer.pug
+         .wrap
+            include modules/content.pug
+            include modules/footer.pug
       script(src="js/main.min.js")
