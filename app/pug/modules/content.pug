@@ -4,25 +4,25 @@ section.content
             .ac-ba
                 select.ac-ba-item(name="asdf") 
                     option(value="1") Useless first
-                    option(value="2") Lorem, ipsum.
-                    option(value="3") Lorem, ipsum.
+                    option(value="2") Useless second
+                    option(value="3") Useless third
                 select.ac-ba-item(name="asdf") 
                     option(value="1") Condition
-                    option(value="2") Lorem, ipsum.
-                    option(value="3") Lorem, ipsum.
+                    option(value="2") Condition 2
+                    option(value="3") Condition 3
                 select.ac-ba-item(name="asdf") 
                     option(value="1") Delivery options
-                    option(value="2") Lorem, ipsum.
-                    option(value="3") Lorem, ipsum.
+                    option(value="2") Delivery second
+                    option(value="3") Delivery third
 
             .filter-view-wrap
                 .filter-view-category
                     input.filter-view-category__btn(type="button", value="Show all") 
-                    input.filter-view-category__btn(type="button", value="Auction") 
+                    input.filter-view-category__btn(type="button", value="Auction" autofocus)
                     input.filter-view-category__btn(type="button", value="Buy now") 
                 .filter-view-grid
                     input.filter-view-grid__btn(type="image", src="../images/construction-bar/SVG/view-list.svg", alt="view list")
-                    input.filter-view-grid__btn(type="image", src="../images/construction-bar/SVG/view-grid.svg", alt="view grid")
+                    input.filter-view-grid__btn(type="image", src="../images/construction-bar/SVG/view-grid.svg", alt="view grid" autofocus)
         .tags-wrap
             ul.tags
                 li.tags-item 
@@ -41,18 +41,26 @@ section.content
                     a.tags__link(href="#") vintage typewriter
         .cards
             .card-01.card-margin
-                include ../includes/card.pug
-            .card-02.card-margin
-                include ../includes/card.pug
-            .card-03.card-margin
-                include ../includes/card.pug
-            .card-04.card-margin
-                include ../includes/card.pug
-            .card-05.card-margin
-                include ../includes/card.pug
-            .card-06.card-margin
-                include ../includes/card.pug
-            .card-07.card-margin
-                include ../includes/card.pug
-            .card-08.card-margin
-                include ../includes/card.pug
+                include ../cards/keyboard.pug
+            .card-01.card-margin
+                include ../cards/shoes.pug
+            .card-01.card-margin
+                include ../cards/cat.pug
+            .card-01.card-margin
+                include ../cards/brush.pug
+            .card-01.card-margin
+                include ../cards/bkettle.pug
+            .card-01.card-margin
+                include ../cards/oil.pug
+            .card-01.card-margin
+                include ../cards/plastic.pug
+            .card-01.card-margin
+                include ../cards/plant.pug
+            .card-01.card-margin
+                include ../cards/notepad.pug
+            .card-01.card-margin
+                include ../cards/pants.pug
+            .card-01.card-margin
+                include ../cards/notepadPen.pug
+            .card-01.card-margin
+                include ../cards/varnish.pug

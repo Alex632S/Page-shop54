@@ -27,7 +27,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 .container {
   width: 100%;
-  padding: 0 11vw;
+  padding: 0 9vw;
 }
 
 .c-flex {
@@ -45,5 +45,11 @@ input[type='search']::-webkit-search-results-decoration {
 @media screen and (max-width: 980px) {
   .container {
     padding: 0 1vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 0 0.5vw
   }
 }

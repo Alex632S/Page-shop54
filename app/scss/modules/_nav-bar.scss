@@ -1,6 +1,31 @@
 .nav-bar {
     width: calc(370 / 1920 * 100vw);
 }
+.nav-bar-btn {
+    margin: 48px auto;
+}
+.nav-bar-btn__button {
+    padding: 3px 20px;
+    border: 1px solid #9DC2FF;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all .3s;
+    cursor: pointer;
+    .nav-bar-btn__span {
+        font-size: 24px;
+        line-height: 150%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #2264D1;
+    }
+}
+.nav-bar-btn__button:hover {
+    box-shadow: 0px 2px 4px rgba(27, 78, 163, 0.2), 
+            0px 4px 8px rgba(41, 121, 255, 0.2);
+}
 
 .tab input, 
 .tab-content { 

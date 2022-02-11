@@ -1,21 +1,25 @@
 section.nav-bar 
     .accordion-bar-wrap
+        .nav-bar-btn
+            button.nav-bar-btn__button 
+                img.nav-bar-btn__img(src="../images/nav-bar/SVG/t-burger.svg", alt="burger")
+                span.nav-bar-btn__span Departments
         ul.accordion-bar
  
             li.accordion-bar-item.tab
-                input#mainTab(type="checkbox" name="teb-group")
+                input#mainTab(type="checkbox" name="teb-group" checked)
                 label.tab-title(for="mainTab") 
                     span.accordion-bar-item__span All Categories
                 section.tab-content
         
                     li.accordion-bar-item.tab
-                        input#subTab01(type="checkbox" name="teb-group")
+                        input#subTab01(type="checkbox" name="teb-group" checked)
                         label.tab-title(for="subTab01") 
                             span.accordion-bar-item__span Electronics
                         section.tab-content
         
                             li.accordion-bar-item.tab
-                                input#innerTabSps(type="checkbox" name="teb-group")
+                                input#innerTabSps(type="checkbox" name="teb-group" checked)
                                 label.tab-title(for="innerTabSps") 
                                     span.accordion-bar-item__span Cell Phones & Smartphones
                                 ul.tab-content

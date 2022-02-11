@@ -76,7 +76,7 @@
 }
 .burger-btn {
     position: absolute;
-    background-color: #4ff;
+    background: url(../images/nav-bar/SVG/t-burger.svg) 0 0 no-repeat;
     width: 30px;
     height: 30px;
     padding: 3px;
@@ -152,6 +152,7 @@
 /* Logo minimization */
 @media screen and (max-width: 1150px) {
     .header {
+        padding-top: 20px;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -174,7 +175,7 @@
         display: none;
     }
     .burger-btn {
-        display: block;
+        display: inline-block;
     }
 }
 
