@@ -1,12 +1,15 @@
 .menu-category {
-    padding-top: 16px;
+    width: 100%;
+    margin-top: 16px;
+    padding: 0 1vw;
+
 }
 .menu-category-ul {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 0;
 }
 .menu-category__item {
     padding: 5px;
@@ -20,7 +23,8 @@
     transform: scale(1.1);
 }
 .menu-category-li {
-    text-align: center;
+    width: 150px;
+   text-align: center;
 }
 
 .menu-category__description {

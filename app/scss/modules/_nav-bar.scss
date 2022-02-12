@@ -98,6 +98,17 @@
     justify-content: flex-end;
 }
 
+.radio-show {
+    input { 
+        display: inline-block; 
+    }
+    display: flex;
+    align-items: center;
+    &__label {
+        margin-left: 5px;
+    }
+}
+
 @media screen and (max-width: 990px) {
     .nav-bar {
         display: none;   
