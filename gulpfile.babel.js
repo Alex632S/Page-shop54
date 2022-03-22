@@ -89,4 +89,5 @@ export default gulp.parallel(
 export const buildDist = gulp.series(
    cleanDist, 
    images, 
-   build);
+   build
+);
